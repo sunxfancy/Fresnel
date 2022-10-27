@@ -1,0 +1,6 @@
+[submodule "third-party/zeroerr"]
+	path = third-party/zeroerr
+	url = git@github.com:sunxfancy/zeroerr.git
+[submodule "third-party/VKBuilder"]
+	path = third-party/VKBuilder
+	url = git@github.com:sunxfancy/VKBuilder.git
