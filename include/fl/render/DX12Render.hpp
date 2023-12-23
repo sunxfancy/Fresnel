@@ -3,6 +3,8 @@
 #include "fl/render/IRender.hpp"
 #include "fl/window/IWindow.hpp"
 
+namespace fl {
+
 class DX12Render : public IModule, public IRender {
 public:
     DX12Render();
@@ -22,5 +24,6 @@ protected:
     int display_w, display_h;
 
     virtual void Init();
-    virtual void initGL();
 };
+
+}  // namespace fl

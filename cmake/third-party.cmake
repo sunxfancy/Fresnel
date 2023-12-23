@@ -11,6 +11,10 @@ message(STATUS "GLM included at ${GLM_INCLUDE_DIR}")
 find_package(GLFW3 REQUIRED)
 message(STATUS "Found GLFW3 in ${GLFW3_INCLUDE_DIR}")
 
+# add sub projects
+include_directories(third-party/VKBuilder/include)
+add_subdirectory(third-party/zeroerr)
+include_directories(third-party/zeroerr/include)
 
 # first create relevant static libraries requried for other projects
 file(GLOB_RECURSE IMGUI_SRC ${CMAKE_CURRENT_SOURCE_DIR}/third-party/imgui/*.cpp)
@@ -31,9 +35,6 @@ set(LIBS ${LIBS} pugixml)
 
 add_library(noiseutils "third-party/src/noiseutils.cpp")
 set(LIBS ${LIBS} noise noiseutils)
-
-add_library(VkBootstrap "third-party/src/VkBootstrap.cpp")
-set(LIBS ${LIBS} VkBootstrap)
 
 # For PhysX
 ## include path configuration

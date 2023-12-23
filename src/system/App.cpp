@@ -1,5 +1,6 @@
 
 #include "fl/system/App.hpp"
+#include <clocale>
 
 namespace fl
 {
@@ -14,6 +15,7 @@ App::~App() {
 }
 
 void App::Init() {
+    std::setlocale(LC_ALL, "en_US.utf8");
     window->setRenderCallback(this);
     ui->setUICallback(this);
 }

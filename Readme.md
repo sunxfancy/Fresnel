@@ -14,3 +14,9 @@ Design:
 4. Provide optional window system with SDL2 and IMGUI library
 5. UTF-8 and custom font support 
 
+## Dependencies
+
+- [Vulkan SDK](https://www.khronos.org/vulkan/) 
+- [Python3](https://www.python.org/downloads/)
+- [python-libclang](https://pypi.org/project/libclang/)
+

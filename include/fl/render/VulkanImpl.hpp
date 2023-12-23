@@ -1,7 +1,8 @@
 #pragma once
 
-#include <VkBootstrap.h>
+
 #include <vulkan/vulkan.h>
+#include "vkbuilder.hpp"
 
 #include <vector>
 
@@ -64,6 +65,11 @@ public:
     VkSurfaceKHR   surface;
     vkb::Device    device;
     vkb::Swapchain swapchain;
+
+    vk::RenderPass renderpass;
+    vk::Pipeline pipeline;
+
+    vkb::Present present;
     
     VkDescriptorPool descriptor_pool;
 
